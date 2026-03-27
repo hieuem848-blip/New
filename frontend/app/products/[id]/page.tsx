@@ -151,7 +151,7 @@ export default function ProductDetailPage() {
                 {product.name}
               </h1>
               <div className="text-3xl font-bold text-[#C8A96A]">
-                {formatPrice(displayPrice)}
+                {formatPrice(displayPrice * qty)}
               </div>
             </div>
 

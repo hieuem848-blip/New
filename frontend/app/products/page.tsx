@@ -2,9 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { SlidersHorizontal, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
-import {
-  productApi, categoryApi, type ApiProduct, type ApiCategory,
-} from "@/app/lib/api";
+import { productApi, categoryApi, type ApiProduct, type ApiCategory } from "@/app/lib/api";
 import ProductCard from "@/app/components/products/ProductCard";
 
 export default function ProductsPage() {

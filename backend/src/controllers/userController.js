@@ -57,18 +57,18 @@ export const updateProfile = async (req, res) => {
         return res.status(400).json({ message: "Vui lòng nhập mật khẩu cũ" });
       }
 
-      const isMatch = await bcrypt.compare(oldPassword, user.password);
+      const isMatch = await bcrypt.compare(oldPassword, user.hashedPassword); // đổi cập nhập password
       if (!isMatch) {
         return res.status(400).json({ message: "Mật khẩu cũ không đúng" });
       }
 
       const salt = await bcrypt.genSalt(10);
-      user.password = await bcrypt.hash(newPassword, salt);
+      user.hashedPassword = await bcrypt.hash(newPassword, salt); // đổi cập nhập password
     }
 
     // Đổi tên
     if (fullName) {
-      user.fullName = fullName;
+      user.displayName = fullName;
     }
 
     await user.save();

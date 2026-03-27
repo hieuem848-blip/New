@@ -60,6 +60,7 @@ export interface ApiProduct {
   _id: string; name: string; description: string; basePrice: number;
   category: { _id: string; name: string; slug: string } | string;
   isCustomizable?: boolean; status: string; createdAt: string;
+  mainImageUrl?: string; // ✅ thêm trường này để dễ hiển thị ảnh đại diện trong danh sách sản phẩm, lấy từ ProductImage có isMain=true 
 }
 export interface ApiProductDetail { product: ApiProduct; images: ProductImage[]; variants: ProductVariant[]; }
 

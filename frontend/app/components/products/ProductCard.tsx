@@ -24,6 +24,7 @@ const CATEGORY_IMG: Record<string, string> = {
 };
 
 function thumb(product: ApiProduct): string {
+  if (product.mainImageUrl) return product.mainImageUrl; // ✅ ưu tiên ảnh chính nếu có
   const slug = typeof product.category === "object" ? product.category.slug : "";
   return CATEGORY_IMG[slug] ?? "/cake.jpg";
 }

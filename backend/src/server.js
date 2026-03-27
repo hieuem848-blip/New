@@ -55,12 +55,12 @@ app.use("/api/payments/vnpay", vnpayRoutes); // VNPay callback - public
 
 /* ── PROTECTED USER ─────────────────────────────────────────── */
 app.use("/api/users",        protectedRoute, userRoute);
-app.use("/api/addresses",    protectedRoute, addressRoute);   // ✅ NEW
+app.use("/api/addresses",    protectedRoute, addressRoute);   //  NEW thêm 
 app.use("/api/carts",        protectedRoute, cartRoutes);
 app.use("/api/orders",       protectedRoute, orderRoutes);
 app.use("/api/custom-cakes", protectedRoute, customCakeRoutes);
 app.use("/api/payments",     protectedRoute, paymentRoutes);
-app.use("/api/reviews",      reviewRoutes);
+app.use("/api/reviews",      protectedRoute, reviewRoutes);
 
 /* ── ADMIN ──────────────────────────────────────────────────── */
 app.use("/api/admin/users",        adminUserRoutes);
@@ -72,5 +72,5 @@ app.use("/api/admin/chats",        adminChatRoutes);
 app.use("/api/admin/dashboards",   adminDashboardRoutes);
 
 connectDB().then(() => {
-  app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });

@@ -10,8 +10,6 @@ import {
 
 const router = express.Router();
 
-router.use(authMiddleware);
-
 router.get("/", getCart);
 router.post("/add", addToCart);
 router.put("/update", updateCartItem);

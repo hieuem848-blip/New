@@ -60,7 +60,7 @@ app.use("/api/carts",        protectedRoute, cartRoutes);
 app.use("/api/orders",       protectedRoute, orderRoutes);
 app.use("/api/custom-cakes", protectedRoute, customCakeRoutes);
 app.use("/api/payments",     protectedRoute, paymentRoutes);
-app.use("/api/reviews",      protectedRoute, reviewRoutes);
+app.use("/api/reviews",      reviewRoutes);
 
 /* ── ADMIN ──────────────────────────────────────────────────── */
 app.use("/api/admin/users",        adminUserRoutes);

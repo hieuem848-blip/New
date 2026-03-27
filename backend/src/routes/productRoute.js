@@ -8,7 +8,7 @@ import {
 const router = express.Router();
 
 router.get("/", getProducts);
+router.get("/category/:slug", getProductsByCategory); //đổi đường dẫn để tránh xung đột với route get("/:id")
 router.get("/:id", getProductDetail);
-router.get("/category/:slug", getProductsByCategory);
 
 export default router;

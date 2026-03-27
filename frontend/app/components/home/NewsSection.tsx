@@ -15,7 +15,7 @@ const newsData: NewsItem[] = [
     id: 1,
     title: "BÁNH KEM TRÁI CÂY – XU HƯỚNG NGỌT NGÀO CHO MÙA HÈ",
     desc: "Những chiếc bánh kem kết hợp trái cây tươi như dâu, kiwi, xoài đang trở thành lựa chọn hàng đầu trong mùa hè nhờ hương vị thanh mát và ít ngấy.",
-    image: "/brand.jpg",
+    image: "/footer_bg.jpg",
     category: "Bánh kem",
   },
   {
